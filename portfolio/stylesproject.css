@@ -1,0 +1,124 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Galerie de projets */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Carte de projet */
+.project-card {
+    background-color: #fff; /* Chaque projet peut avoir sa propre couleur via le style inline */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation douce */
+    padding: 15px; /* Ajout d'un padding autour des éléments internes */
+    box-sizing: border-box; /* Inclut le padding dans la taille totale de la carte */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Effet de levée au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    display: block;
+    margin: 0 auto; /* Centre l'image à l'intérieur du conteneur */
+    object-fit: contain; /* Garde le ratio d'aspect de l'image et laisse de l'espace autour */
+    border-radius: 5px; /* Arrondir légèrement les bords de l'image */
+    background-color: #f4f4f4; /* Couleur de fond pour l'espace autour de l'image */
+}
+
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Media Queries pour les petits écrans */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .project-info h2 {
+        font-size: 1.5rem;
+    }
+    .project-info p {
+        font-size: 0.9rem;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0; /* Assure que le padding est seulement en haut et en bas */
+    background-color: #000; /* Couleur de fond du header */
+    color: #fff;
+    margin: 0; /* Supprime toute marge autour du header */
+}
+
+header h1, header p {
+    margin: 0; /* Supprime les marges des titres et des paragraphes */
+}
+
+.button-container {
+    display: flex; /* Centrer le bouton */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 0; /* Supprimer tout margin qui peut causer un espace blanc */
+    background-color: #000; /* Fond noir pour le container */
+    padding: 15px 0; /* Ajouter de l'espace autour du bouton */
+}
+
+.button-container button {
+    background-color: #000; /* Couleur de fond du bouton */
+    color: #e5e5e5; /* Couleur du texte du bouton */
+    font-family: "IBM Plex Sans", sans-serif; /* Utiliser la même police que le reste de la page */
+    font-size: 1.5rem; /* Taille de police plus grande */
+    font-weight: 400; /* Poids de la police */
+    padding: 15px 30px; /* Plus de padding pour agrandir le bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsqu'on survole le bouton */
+    transition: background-color 0.3s ease; /* Animation douce lors du survol */
+    text-decoration: none; /* Supprime la décoration de texte */
+}
+
+.button-container button:hover {
+    background-color: #555; /* Change la couleur de fond lors du survol */
+}
+
+

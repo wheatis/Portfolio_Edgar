@@ -1,0 +1,264 @@
+:root {
+  --m: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "IBM Plex Sans";
+  font-weight: 300;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  height: 190vh;
+  margin: 0;
+  color: #d5d5d5;
+  font-size: calc(0.3 * var(--m));
+}
+
+h2 {
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--m);
+  margin: 0;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: calc(0.6 * var(--m));
+  margin: 0;
+}
+
+.card {
+    height: calc(8 * var(--m));
+    width: calc(12 * var(--m));
+    position: fixed;
+    margin: calc(2 * var(--m)) calc(5 * var(--m)) calc(5 * var(--m))
+      calc(5 * var(--m));
+    color: white; /* Keeps the text color white */
+    border-radius: calc(0.5 * var(--m));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--m);
+    overflow: hidden; /* Ensures pseudo-element stays within the card */
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('yeux3.jpeg'); /* Add the image URL here */
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image within the card */
+    filter: brightness(40%); /* Reduces brightness to 60% */
+    z-index: -1; /* Places the image behind the text */
+    border-radius: calc(0.5 * var(--m)); /* Matches the border radius of the card */
+  }
+  
+  .card > * {
+    position: relative; /* Ensures text and button appear above the background image */
+    z-index: 1; /* Positions text above the background image */
+  }
+  
+
+  
+
+button {
+  background-color: #000;
+  font-size: calc(0.4 * var(--m));
+  border: none;
+  color: #e5e5e5;
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  padding: calc(0.35 * var(--m)) calc(0.8 * var(--m));
+  border-radius: calc(0.3 * var(--m));
+}
+
+footer {
+  margin-top: 80vh;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 5rem 2vw;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0) 5%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(0, 0, 0, 1) 50%,
+    rgb(0, 0, 0)
+  );
+  z-index: -7;
+}
+
+.backdrop {
+  z-index: -5;
+  position: absolute;
+  inset: 0;
+
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+
+  mask-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 1) 30%,
+    rgb(0, 0, 0)
+  );
+
+  -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.5) 10%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 1) 30%,
+    rgb(0, 0, 0)
+  );
+}
+
+.col {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+  width: 28%;
+}
+
+.col2,
+.col3 {
+  background-color: #121212;
+  border-radius: calc(0.5 * var(--m));
+}
+
+img {
+  height: calc(0.3 * var(--m));
+  object-fit: cover;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  width: calc(0.8 * var(--m));
+  height: calc(0.8 * var(--m));
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: calc(0.1 * var(--m));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --m: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    padding: 5rem 20vw;
+  }
+  .col {
+    width: 100%;
+  }
+}
+
+.image-container {
+    width: 100%; /* Largeur pleine de la page */
+    height: 130vh; /* Hauteur de la fenêtre */
+    display: flex; /* Utilisation de Flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    background-color: #292929; /* Optionnel : couleur de fond pour visibilité */
+}
+
+.image-container img {
+    max-width: 80%; /* Limite la largeur maximale de l'image à 50% de la largeur de la page */
+    max-height: 80%; /* Limite la hauteur maximale de l'image à 50% de la hauteur de la page */
+    height: auto; /* Maintient le ratio d'aspect de l'image */
+    width: auto; /* Maintient le ratio d'aspect de l'image */
+    border: 2px solid #003cff; /* Optionnel : ajoute une bordure à l'image */
+    border-radius: 10px; /* Optionnel : ajoute des coins arrondis */
+}
+
+.button-container {
+    display: flex; /* Centrer le bouton */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.button-container button {
+    background-color: #000; /* Couleur de fond du bouton */
+    color: #e5e5e5; /* Couleur du texte du bouton */
+    font-family: "IBM Plex Sans"; /* Utiliser la même police que le reste de la page */
+    font-size: calc(0.4 * var(--m)); /* Taille de police adaptable */
+    font-weight: 400; /* Poids de la police */
+    padding: calc(0.35 * var(--m)) calc(0.8 * var(--m)); /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: calc(0.3 * var(--m)); /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsqu'on survole le bouton */
+    transition: background-color 0.3s ease; /* Animation douce lors du survol */
+}
+
+.button-container button:hover {
+    background-color: #555; /* Change la couleur de fond lors du survol */
+}
+
+.download-container {
+    display: flex; /* Centre le bouton */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+
+.download-button {
+    background-color: #000; /* Couleur de fond du bouton */
+    color: #e5e5e5; /* Couleur du texte du bouton */
+    font-family: "IBM Plex Sans"; /* Utiliser la même police que le reste de la page */
+    font-size: calc(0.4 * var(--m)); /* Taille de police adaptable */
+    font-weight: 400; /* Poids de la police */
+    padding: calc(0.35 * var(--m)) calc(0.8 * var(--m)); /* Espacement interne */
+    border: none; /* Pas de bordure */
+    border-radius: calc(0.3 * var(--m)); /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsqu'on survole le bouton */
+    text-decoration: none; /* Supprime la décoration du lien */
+    display: inline-block; /* Affichage en ligne pour les boutons */
+    transition: background-color 0.3s ease; /* Animation douce lors du survol */
+    text-align: center; /* Centrer le texte */
+}
+
+.download-button:hover {
+    background-color: #555; /* Change la couleur de fond lors du survol */
+}

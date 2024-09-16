@@ -1,0 +1,88 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+header {
+    padding: 2rem;
+    background-color: #000000;
+    color: #fff;
+    margin: 0; /* Suppression de la marge */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Bouton Retour à l'accueil */
+.button-container {
+    display: flex; /* Centrer le bouton */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centre verticalement */
+    margin: 0; /* Suppression de la marge pour éviter l'espace blanc */
+    background-color: #000; /* Fond noir pour le container */
+    padding: 15px 0; /* Ajouter de l'espace autour du bouton */
+}
+
+.button-container button {
+    background-color: #000; /* Couleur de fond du bouton */
+    color: #e5e5e5; /* Couleur du texte du bouton */
+    font-family: "IBM Plex Sans", sans-serif; /* Utiliser la même police que le reste de la page */
+    font-size: 1.5rem; /* Taille de police plus grande */
+    font-weight: 400; /* Poids de la police */
+    padding: 15px 30px; /* Plus de padding pour agrandir le bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur lorsqu'on survole le bouton */
+    transition: background-color 0.3s ease; /* Animation douce lors du survol */
+    text-decoration: none; /* Supprime la décoration de texte */
+}
+
+.button-container button:hover {
+    background-color: #555; /* Change la couleur de fond lors du survol */
+}
+
+/* Conteneur de contacts */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; /* Espace entre les éléments */
+    padding: 3rem;
+    margin: 0; /* Suppression de la marge */
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-logo {
+    width: 100px; /* Taille du logo */
+    height: 100px; /* Taille du logo */
+    cursor: pointer; /* Change le curseur sur le survol */
+    transition: transform 0.3s; /* Animation douce */
+}
+
+.contact-logo:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #000000;
+    color: #fff;
+    margin-top: 2rem;
+}
