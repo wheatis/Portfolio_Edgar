@@ -34,14 +34,15 @@ body {
 }
 
 .project-card img {
-    max-width: 100%; /* Assure que l'image ne dépasse pas le conteneur */
-    height: auto; /* Maintient le ratio d'aspect de l'image */
-    display: block;
-    margin: 0 auto; /* Centre l'image à l'intérieur du conteneur */
-    object-fit: contain; /* Garde le ratio d'aspect de l'image et laisse de l'espace autour */
-    border-radius: 5px; /* Arrondir légèrement les bords de l'image */
-    background-color: #f4f4f4; /* Couleur de fond pour l'espace autour de l'image */
+    width: 100%;          /* Ajuste l'image à la largeur du conteneur */
+    height: 200px;        /* Hauteur fixe pour toutes les images */
+    object-fit: contain;  /* Affiche toute l'image sans la rogner */
+    display: block;       /* Supprime l'espace autour */
+    margin: 0;            /* Supprime les marges */
+    border-radius: 0;     /* Supprime l'arrondi */
+    background: none;     /* Pas de fond */
 }
+
 
 
 .project-info {

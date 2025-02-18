@@ -78,11 +78,11 @@ header p {
     transform: scale(1.1); /* Zoom léger au survol */
 }
 
-/* Pied de page */
 footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 5rem;
     background-color: #000000;
     color: #fff;
-    margin-top: 2rem;
+    margin-top: 0; /* Remplace cette ligne */
 }
+
