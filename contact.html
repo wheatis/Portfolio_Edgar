@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="stylescontact.css"> <!-- Lien vers le fichier CSS -->
+    <style>
+        /* Styles pour les liens */
+        a {
+            color: inherit; /* Utilise la couleur du texte par défaut */
+            text-decoration: none; /* Supprime le soulignement */
+            font-weight: bold; /* Optionnel : Met le texte en gras */
+        }
+
+        a:hover {
+            color: #555; /* Change légèrement la couleur au survol */
+        }
+
+        /* Style du container contact */
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-logo {
+            width: 80px; /* Ajuste la taille des icônes */
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Contactez-moi</h1>
-        <p>Vous pouvez me contacter par email ou via LinkedIn en cliquant sur les icônes ci-dessous.</p>
+        <p>Vous pouvez me contacter par :</p>
     </header>
 
     <!-- Bouton Retour à l'accueil -->
@@ -18,20 +49,20 @@
     </div>
 
     <main class="contact-container">
-        <!-- Logo Gmail -->
+        <!-- Contact par Email -->
         <div class="contact-item">
             <a href="mailto:ed.cavaillez@gmail.com" target="_blank">
                 <img src="gmail.png" alt="Logo Gmail" class="contact-logo">
-                <p>Envoyer un Email</p>
             </a>
+            <p><a href="mailto:ed.cavaillez@gmail.com" target="_blank">Mail</a></p>
         </div>
 
-        <!-- Logo LinkedIn -->
+        <!-- Contact par LinkedIn -->
         <div class="contact-item">
             <a href="https://www.linkedin.com/in/edgar-cavaillez-5191122a9/" target="_blank">
                 <img src="linkedin.png" alt="Logo LinkedIn" class="contact-logo">
-                <p>Voir mon Profil LinkedIn</p>
             </a>
+            <p><a href="https://www.linkedin.com/in/edgar-cavaillez-5191122a9/" target="_blank">LinkedIn</a></p>
         </div>
     </main>
 
